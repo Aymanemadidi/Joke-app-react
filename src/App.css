@@ -10,7 +10,70 @@ body {
   text-align: center;
 }
 
-.robot {
+.title {
+  margin-top: 70px;
+}
+
+.chuck {
+  border-radius: 10px;
   height: 40vmin;
   pointer-events: none;
+}
+
+.read-btn {
+  margin-top: 15px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: medium;
+  background-color: rgb(187, 187, 187);
+  color: rgb(138, 138, 138);
+  font-weight: 600;
+}
+
+.active {
+  background-color: rgb(29, 146, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.active:hover {
+  background-color: rgb(65, 162, 253);
+}
+
+.request-btn {
+  margin-top: 15px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: medium;
+  background-color: rgb(29, 146, 255);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.request-btn:hover {
+  background-color: rgb(65, 162, 253);
+}
+
+.joke-container {
+  margin: auto;
+  padding: 0 15px;
+  /* margin-top: 15px;   */
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  /* width: 70%; */
+  color: rgb(36, 36, 36);
+}
+
+.loading {
+  text-align: center;
 }
