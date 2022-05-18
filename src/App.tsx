@@ -1,5 +1,4 @@
 import "./App.css";
-import robot from "./robot.gif";
 import { useState, useEffect } from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
 import chuckGif from "./chuck-norris.gif";
@@ -10,13 +9,13 @@ function App() {
 
   const { speak } = useSpeechSynthesis();
 
-  // useEffect(() => {
-  //   document.addEventListener("keydown", function (event) {
-  //     console.log(
-  //       `Key: ${event.key} with keycode ${event.keyCode} has been pressed`
-  //     );
-  //   });
-  // }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "j") {
+        speak({ text: joke });
+      }
+    });
+  }, [joke, speak]);
 
   const requestJoke = () => {
     setStatus("pending");
@@ -50,7 +49,7 @@ function App() {
           onClick={() => speak({ text: joke })}
           disabled={status !== "resolved"}
         >
-          Read the joke for me
+          Click here to read the joke or press 'j'
         </button>
       </div>
       <div className="joke-container">
